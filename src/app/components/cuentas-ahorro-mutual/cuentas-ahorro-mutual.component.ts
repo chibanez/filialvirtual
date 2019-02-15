@@ -25,13 +25,13 @@ export class CuentasAhorroMutualComponent implements OnInit {
 
   ngOnInit() {
     this.loading = true;
-    this.cuentasService.getCuentas().subscribe((data:any[]) => {
-      //console.log('EN COMPONENTE', data);
+    this.cuentasService.getCuentas().subscribe((data: any[]) => {
+      // console.log('EN COMPONENTE', data);
       this.cuentas = data;
       this.loading = false;
     });
   }
-  
+
 }
 
 export interface DetalleCuenta {

@@ -2,44 +2,50 @@
 <div class="container-fluid" *ngIf="!loading">
     <div class="row">
         <div class="col-md-12">
-          <table mat-table [dataSource]="movimientos" class="mat-elevation-z8">
+            <div class="card">
+                <div class="card-body">
+                    <h4 class="card-title">Listado de Movimientos de Ahorro Mutual de la Cuenta MMMMMMM/CCC mmmmmm</h4>
+                    <hr>
+                    <table mat-table [dataSource]="movimientos" class="mat-elevation-z8">
 
-            <!--- Note that these columns can be defined in any order.
-                    The actual rendered columns are set as a property on the row definition" -->
-            
-              <!-- Fecha Column -->
-              <ng-container matColumnDef="fecha">
-                <th mat-header-cell *matHeaderCellDef> Fecha </th>
-                <td mat-cell *matCellDef="let element"> {{element.fecha}} </td>
-              </ng-container>
-            
-              <!-- Movimiento Column -->
-              <ng-container matColumnDef="descMovimiento">
-                <th mat-header-cell *matHeaderCellDef> Movimiento </th>
-                <td mat-cell *matCellDef="let element"> {{element.descMovimiento}} </td>
-              </ng-container>
-            
-              <!-- Descripción Column -->
-              <ng-container matColumnDef="descServicio">
-                <th mat-header-cell *matHeaderCellDef> Descripción </th>
-                <td mat-cell *matCellDef="let element"> {{element.descServicio}} </td>
-              </ng-container>
-            
-              <!-- Importe Column -->
-              <ng-container matColumnDef="importe">
-                <th mat-header-cell *matHeaderCellDef> Importe </th>
-                <td mat-cell *matCellDef="let element"> {{element.importe}} </td>
-              </ng-container>
-            
-              <!-- Saldo Operativo Column -->
-              <ng-container matColumnDef="saldoOperativo">
-                <th mat-header-cell *matHeaderCellDef> Saldo Operativo </th>
-                <td mat-cell *matCellDef="let element"> {{element.saldoOperativo}} </td>
-              </ng-container>
-          
-              <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-              <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
-          </table>
+                      <!--- Note that these columns can be defined in any order.
+                              The actual rendered columns are set as a property on the row definition" -->
+                      
+                        <!-- Fecha Column -->
+                        <ng-container matColumnDef="fecha">
+                          <th mat-header-cell *matHeaderCellDef> Fecha </th>
+                          <td mat-cell *matCellDef="let element"> {{element.fecha}} </td>
+                        </ng-container>
+                      
+                        <!-- Movimiento Column -->
+                        <ng-container matColumnDef="descMovimiento">
+                          <th mat-header-cell *matHeaderCellDef> Movimiento </th>
+                          <td mat-cell *matCellDef="let element"> {{element.descMovimiento}} </td>
+                        </ng-container>
+                      
+                        <!-- Descripción Column -->
+                        <ng-container matColumnDef="descServicio">
+                          <th mat-header-cell *matHeaderCellDef> Descripción </th>
+                          <td mat-cell *matCellDef="let element"> {{element.descServicio}} </td>
+                        </ng-container>
+                      
+                        <!-- Importe Column -->
+                        <ng-container matColumnDef="importe">
+                          <th mat-header-cell *matHeaderCellDef> Importe </th>
+                          <td mat-cell *matCellDef="let element"> {{element.importe}} </td>
+                        </ng-container>
+                      
+                        <!-- Saldo Operativo Column -->
+                        <ng-container matColumnDef="saldoOperativo">
+                          <th mat-header-cell *matHeaderCellDef> Saldo Operativo </th>
+                          <td mat-cell *matCellDef="let element"> {{element.saldoOperativo}} </td>
+                        </ng-container>
+                    
+                        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+                    </table>
+                </div>
+            </div>
         </div>
       </div>
 </div>
